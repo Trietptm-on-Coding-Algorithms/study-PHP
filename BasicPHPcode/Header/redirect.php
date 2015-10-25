@@ -1,4 +1,6 @@
 <?php
+  //turned on output buffering!
+  ob_start()
   // This is how you redirect to a new page
   function redirect_to($new_location) {
     header("Location: " . $new_location);
@@ -11,7 +13,8 @@
   } else {
     redirect_to("http://www.lynda.com");
   }
-
+  //flush all php code.
+  ob_end_flush()
 ?>
 
 <!DOCTYPE html>
