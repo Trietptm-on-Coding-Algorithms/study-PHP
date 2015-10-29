@@ -25,11 +25,16 @@ it is fully constructed PHP code which can run pages.
   * do not clutter my brain
   * develop section-by-section
 
+---
+
 - PUBLIC area
   * site pages
     - navigation
     - page content
     - read only
+
+---
+
 - ADMIN area
   * Login Page >> Admin Menu
     - form
@@ -48,8 +53,12 @@ it is fully constructed PHP code which can run pages.
   * Logout
     - do logout
     - back to login
+
+---
+
 ##Refactoring
 It is important concepts to keep in mind.
+
 _Revising existing code to change its structure or appearance without changing its behavior_
 
 - simplicity
