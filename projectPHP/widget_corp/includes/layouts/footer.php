@@ -1,4 +1,4 @@
-    <div id="footer">Copyright 20xx, Widget Corp</div>
+    <div id="footer">Copyright 2015, Widget Corp by Yegun Kim</div>
 
 	</body>
 </html>

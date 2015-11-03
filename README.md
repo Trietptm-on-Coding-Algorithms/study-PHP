@@ -68,3 +68,13 @@ _Revising existing code to change its structure or appearance without changing i
 - flexibility
   * reusability
   * extensibility
+
+##Session
+- User authentication
+  * $logged_in, $user_id
+
+- Holding data during a redirect
+  * $message, $errors
+  
+- Frequently referred to data
+  * $username, $account_type
