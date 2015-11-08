@@ -56,6 +56,15 @@ it is fully constructed PHP code which can run pages.
 
 ---
 
+###Public vs. Admin
+* Read only; no Create, Update, Delete
+* Different appearance, different user interface
+  - should be easy to see the difference
+  - Admin navigation shows all pages at once
+  - public navigation shows pages for selected subject
+* Subject and page visibility
+* Default page content for subjects
+
 ##Refactoring
 It is important concepts to keep in mind.
 
@@ -75,6 +84,6 @@ _Revising existing code to change its structure or appearance without changing i
 
 - Holding data during a redirect
   * $message, $errors
-  
+
 - Frequently referred to data
   * $username, $account_type

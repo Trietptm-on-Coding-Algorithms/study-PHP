@@ -30,6 +30,27 @@
 
       <a href="edit_subject.php?subject=<?php echo urlencode($current_subject["id"]); ?>">Edit Subject</a>
 
+      <hr/>
+      <div style="margin-top: 2em; border-top: 1px solid #000000;">
+        <h3>Pages in this subject: </h3>
+        <?php
+          //query the current subject's pages.
+          $page_list= find_pages_for_subject($current_subject["id"]);
+          //make list of current subject's pages.
+          echo "<ul class=\"pages\">";
+          foreach($page_list as $one_page){
+            echo "<li> <a href=\"manage_content.php?page=";
+            echo urlencode($one_page["id"]);
+            echo "\">";
+            echo htmlentities($one_page["menu_name"]);
+            echo "</a></li>";
+          }
+          echo "</ul>";
+        ?>
+        <br/>
+        +<a href="new_page.php?subject=<?php echo urlencode($current_subject["id"]); ?>"> Add a new page to this subject</a>
+      </div>
+
     <?php } elseif ($current_page) { ?>
 
       <h2>Manage Page</h2>
@@ -39,7 +60,8 @@
       Content: <br />
       <div class="view-content">
         <?php echo htmlentities($current_page["content"]); ?>
-      </div>
+      </div></br>
+      <a href="edit_page.php?page=<?php echo urlencode($current_page["id"]); ?>">Edit Page</a>
 
     <?php } else { ?>
       Please select a subject or a page.
