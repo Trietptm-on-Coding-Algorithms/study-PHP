@@ -5,6 +5,7 @@
 <?php require_once("../includes/functions.php"); ?>
 
 <!--'header' do the first part of HTML-->
+<?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
 
 <!--find out the page's value-->
@@ -16,7 +17,7 @@
     <a href="admin.php">&laquo; Main menu</a><br/>
     <!--'navigation' function take care the navigation-->
     <?php echo navigation($current_subject, $current_page); ?>
-		<a href="new_subject.php">+ Add a subject </a>
+		+ <a href="new_subject.php">Add a subject </a>
   </div>
   <div id="page">
 
@@ -35,7 +36,7 @@
         <h3>Pages in this subject: </h3>
         <?php
           //query the current subject's pages.
-          $page_list= find_pages_for_subject($current_subject["id"]);
+          $page_list= find_pages_for_subject($current_subject["id"],false);
           //make list of current subject's pages.
           echo "<ul class=\"pages\">";
           foreach($page_list as $one_page){

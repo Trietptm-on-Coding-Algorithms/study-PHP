@@ -5,7 +5,7 @@
 <?php require_once("../includes/functions.php"); ?>
 
 <?php
-  $current_page = find_page_by_id($_GET["page"]);
+  $current_page = find_page_by_id($_GET["page"], false);
   if(!$current_page){
     //subject ID was missing or invalid or
     //subject could not be found in database
